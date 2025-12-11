@@ -1,0 +1,94 @@
+body {
+background: #373B44;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #4286f4, #373B44);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #4286f4, #373B44); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+
+.contenedor {
+  width: 90%;
+  max-width: 700px;
+  margin: auto;
+  background: white;
+  padding: 15px;
+  border: 1px solid #ccc;
+}
+
+
+nav {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+nav button {
+  padding: 6px 10px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.seccion {
+  display: none;
+}
+.seccion.visible {
+  display: block;
+}
+
+form {
+  margin-top: 10px;
+
+}
+
+form label {
+  display: block;
+  margin-top: 8px;
+}
+
+form input,
+form select {
+  width: 100%;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+form button {
+  width: 100%;
+  padding: 8px;
+  margin-top: 10px;
+}
+
+/* Tabla muy simple */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  border: 1px solid #999;
+  padding: 6px;
+}
+
+th {
+  background: #ddd;
+}
+
+/* Botones de editar y eliminar */
+.btn-editar {
+  background: #ffce00;
+  padding: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-eliminar {
+  background: #ff4d4d;
+  padding: 4px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+h1, h2 {
+  text-align: center;
+  font-family: "Lato", sans-serif;
+}

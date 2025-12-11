@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Gym - Suscripciones</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <h1>Sistema de Suscripciones - Gym</h1>
+  
+  <nav>
+    <button data-section="registro">Registrar (nuevo socio)</button>
+    <button data-section="login-admin">Administrador</button>
+    <button data-section="login-cliente">Cliente</button>
+  </nav>
+
+  <section id="seccion-registro" class="seccion visible">
+    <h2>Registro de nuevo socio</h2>
+    <form id="form-registro">
+      <label>Nombre:
+        <input type="text" name="nombre" required>
+      </label>
+      <label>Edad:
+        <input type="number" name="edad" required>
+      </label>
+      <label>Correo:
+        <input type="email" name="correo" required>
+      </label>
+      <label>Plan:
+        <select name="plan">
+          <option value="Mensual básica">Mensual básica</option>
+          <option value="Trimestral">Trimestral</option>
+          <option value="Anual">Anual</option>
+        </select>
+      </label>
+      <label>Costo mensual:
+        <input type="number" name="costoMensual" placeholder="500">
+      </label>
+      <button type="submit",>Registrar</button>
+    </form>
+    <p id="mensaje-registro"></p>
+  </section>
+
+  <section id="seccion-login-admin" class="seccion">
+    <h2>Login Administrador</h2>
+    <form id="form-login-admin">
+      <label>Correo:
+        <input type="email" name="email" placeholder="Correo Electrónico" required>
+      </label>
+      <label>Contraseña:
+        <input type="password" name="password" placeholder="******" required>
+      </label>
+      <button type="submit">Iniciar sesión (Admin)</button>
+    </form>
+    <p id="mensaje-login-admin"></p>
+  </section>
+
+  <section id="seccion-panel-admin" class="seccion">
+    <h2>Panel administrador - Socios</h2>
+
+    <div class="filtros">
+      <label>Buscar por nombre:
+        <input type="text" id="busqueda-nombre">
+      </label>
+      <button id="btn-buscar">Buscar</button>
+      <button id="btn-recargar">Mostrar todos</button>
+    </div>
+    <table id="tabla-socios">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Edad</th>
+          <th>Correo</th>
+          <th>Plan</th>
+          <th>Costo</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="seccion-login-cliente" class="seccion">
+    <h2>Login Cliente</h2>
+    <form id="form-login-cliente">
+      <label>Correo:
+        <input type="email" name="correo" required>
+      </label>
+      <button type="submit">Ver mi suscripción</button>
+    </form>
+    <p id="mensaje-login-cliente"></p>
+  </section>
+
+  <section id="seccion-panel-cliente" class="seccion">
+    <h2>Mi suscripción</h2>
+    <div id="datos-cliente">
+    </div>
+  </section>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
