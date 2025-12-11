@@ -15,7 +15,7 @@ app.get("/", (req, res) => {
   res.send("Servidor backend del Gym funcionando");
 });
 
-const PORT = process.env.PORT || 3000;
+const PORT = 3000;
 app.listen(PORT, () => {
   console.log(`Backend escuchando en http://localhost:${PORT}`);
 });
